@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/ac.css">
+    <title>Cool Mate</title>
+</head>
+
+<body>
+    <div class="institute-logo">
+        <img src="img/diu_logo-removebg-preview.png" alt="Institute-Logo" id="insti-img" onclick="returnhome()">
+    </div>
+    <div class="logo-img">
+        <img src="img/logo-bg.png" alt="Logo" id="grp-img">
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="gui-name" style="display: flex; align-items: center;">
+                <h1 style="margin-right: 10px;">Cool Mate - Your Personal AC Mate</h1>
+                <img src="img/man-factory-worker.png" alt="" style="height: 40%; width: 20%;">
+            </div>
+            <div class="card">
+                <div class="exp">
+                    <label for="temp" style="text-align: center;">Enter Current Temprature (fahrenheit)</label>
+                    <input type="number" id="temp" name="Temprature">
+                    <hr />
+
+                    <label for="hum">Enter Humidity (%)</label>
+                    <input type="number" id="hum" name="Humidity">
+                    <hr />
+
+                    <label for="tod">Enter time (24-hour)</label>
+                    <input type="time" id="tod" name="time">
+                    <hr />
+
+                    <label for="w">Enter the day</label>
+                    <input list="day" id="w" name="Day of week">
+                    <datalist id="day">
+                        <option value="Sun">Sunday</option>
+                        <option value="Mon">Monday</option>
+                        <option value="Tues">Tuesday</option>
+                        <option value="Wed">Wednesday</option>
+                        <option value="Thu">Thursday</option>
+                        <option value="Fri">Friday</option>
+                        <option value="Sat">Saturday</option>
+                    </datalist>
+                    <hr />
+                    <button type="button" onclick="getnum()" id="btn-check" class="btnn">Check</button>
+                    <hr />
+                    <br>   
+                </div>
+                <div class="result-condition">
+                    <input type="text" id="state" class="state" name="Result">
+                </div>
+            </div>
+        </div>
+</body>
+    <script src="js/ac.js"></script>
+    <script>
+        function returnhome(){
+            window.location.href = "index.html";
+        }
+    </script>
+
+</html>

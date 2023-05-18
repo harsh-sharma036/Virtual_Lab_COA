@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Number Convertor</title>
+    <link rel="stylesheet" href="/css/number-convertor.css">
+
+</head>
+
+<body>
+    <div class="institute-logo">
+        <img src="img/diu_logo-removebg-preview.png" alt="Institute-Logo" id="insti-img" onclick="returnhome()">
+    </div>
+    <div class="logo-img">
+        <img src="img/logo-bg.png" alt="Logo" id="grp-img">
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="gui-name">
+                <h1>Number Convertor</h1>
+            </div>
+            <div class="card">
+                <form name="convertor" id="convertor">
+                    <div class="form-group">
+                        <label for="base">Enter Base/Radix</label>
+                    </div>
+                    <input list="radix" id="base" />
+                    <datalist id="radix">
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="10">Decimal</option>
+                        <option value="16">Hexadecimal</option>
+                    </datalist>
+                    <div class="form-group">
+                        <label for="num">Enter Number</label>
+                    </div>
+                    <input type="text" id="num" />
+                    <div class="form-group">
+                        <button type="button" onclick="calculate('2')">Binary</button>
+                        <button type="button" onclick="calculate('8')">Octal</button>
+                        <button type="button" onclick="calculate('10')">Decimal</button>
+                        <button type="button" onclick="calculate('16')">Hexadecimal</button>
+                    </div>
+                    <div class="out">
+                        Output: <output name="result" id="result"></output>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/number-convertor.js"></script>
+    <script>
+        function returnhome(){
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>

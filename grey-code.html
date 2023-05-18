@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="graycounter.css">
+    <title>Gray Counter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 class="headd">COUNTER</h1>
+        </div>
+        <div class="box">
+            <div class="btn press cont">
+                <button class="submit" onclick="increment()">INCREMENT</button>
+            </div>
+            <div class="show cont">
+                <div class="answer"><span id="answerr"></span></div>
+            </div>
+            <div class="btn decrement cont">
+                <button class="submit" onclick="decrement()">DECREMENT</button>
+            </div>
+            <div class="current cont">
+                <div class="state">
+                    <div class="text">CURRENT STATE</div>
+                </div>
+                <div class="fig"><span class="cs" id="currentState"></span></div>
+            </div>
+            <div class="gif cont">
+                <div class="btn reset cont">
+                    <button class="submit2" onclick="reset()">RESET</button>
+                </div>
+                <div class="imgg">
+                    <img class="image"src="giphy.gif" alt="arrow">
+                </div>
+               
+            </div>
+            <div class="next cont">
+                <div class="state">
+                    <div class="text">NEXT STATE</div>
+                </div>  
+                <div class="fig"><span class="ns" id="nextState"></span></div>
+            </div>
+            <div class="light cont">
+                <p><span class="aab"><span class="aa">On </span><span class="b">1</span></span><span class="cd"><span class="c">Off </span><span class="d">0</span></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+		var currentState = "0 0 0 0";
+        var currentvalue = "0";
+        // var currentindex = 0;
+		var grayCode = ["0 0 0 0", "0 0 0 1", "0 0 1 1", "0 0 1 0", "0 1 1 0", "0 1 1 1", "0 1 0 1", "0 1 0 0", "1 0 0 1", "1 0 0 0"];
+		var finalvalue = ["0", "1", "3", "2", "6", "7", "5", "4", "9", "8"];
+		function increment() {
+			var index = grayCode.indexOf(currentState);
+			var nextIndex = (index + 1) % 10;
+			var nextState = grayCode[nextIndex];
+            var currentindex = finalvalue.indexOf(currentvalue);
+            var nexttindex = (currentindex + 1) % 10;
+            var nextanswer = finalvalue[nexttindex];
+            document.getElementById("currentState").innerHTML = currentState;
+			document.getElementById("nextState").innerHTML = nextState;
+			document.getElementById("answerr").innerHTML = currentvalue;
+			currentState = nextState;
+            currentvalue = nextanswer;
+		}
+		
+		function decrement() {
+            var index = grayCode.indexOf(currentState);
+			var nextIndex = (index - 1 + 10) % 10;
+			var nextState = grayCode[nextIndex];
+            var currentindex = finalvalue.indexOf(currentvalue);
+            var nexttindex = (currentindex - 1 + 10) % 10;
+            var nextanswer = finalvalue[nexttindex];
+			document.getElementById("currentState").innerHTML = currentState;
+			document.getElementById("nextState").innerHTML = nextState;
+			document.getElementById("answerr").innerHTML = currentvalue;
+			currentState = nextState;
+            currentvalue = nextanswer;
+
+		}
+        function reset() {
+            document.getElementById("currentState").innerHTML = "0 0 0 0";
+			document.getElementById("nextState").innerHTML = "0 0 0 1 ";
+            document.getElementById("answerr").innerHTML = "0";
+		}
+	</script>
+    <!-- <script type="text/javascript" src="graycounter.js"></script> -->
+</body>
+</html>

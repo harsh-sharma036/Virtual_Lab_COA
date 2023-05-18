@@ -1,0 +1,351 @@
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+
+}
+
+#scroller {
+    width: 112vw;
+    height: 42vw;
+}
+
+/*Virtual lab*/
+.vlab {
+    background-image: url("/img/Full_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+
+.vlab ul,
+.vlab li,
+ul.office-folder,
+ul.office-folder li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.vlab button,
+ul.office-folder li a {
+    height: auto;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.vlab button:hover,
+.vlab button:focus,
+ul.office-folder li a:hover,
+ul.office-folder li a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.vlab button:hover img,
+.vlab button:focus img,
+ul.office-folder li a:hover img,
+ul.office-folder li a:focus img {
+    animation-play-state: paused;
+    filter: drop-shadow(1px 3px 7px #00cfff);
+    -webkit-filter: drop-shadow(1px 3px 7px #00cfff);
+    -moz-filter: drop-shadow(1px 3px 7px #00cfff);
+    -ms-filter: drop-shadow(1px 3px 7px #00cfff);
+    -o-filter: drop-shadow(1px 3px 7px #00cfff);
+}
+
+
+button#office {
+    width: 13.5%;
+    top: 34%;
+    left: 4%;
+}
+
+button#safety {
+    width: 7%;
+    left: 37.5%;
+    top: 28%;
+    display: none;
+}
+
+button#computer {
+    width: 8%;
+    left: 45.5%;
+    top: 49%;
+}
+
+button#institute-logo {
+    width: 7.2%;
+    left: 47%;
+    top: 28%;
+}
+
+button#grp-logo {
+    width: 11.5%;
+    left: 62.5%;
+    top: 25.2%;
+}
+
+button#name-lab {
+    width: 14%;
+    left: 51%;
+    top: 15.2%;
+}
+
+
+
+
+
+a#office-folder {
+    width: 15%;
+    left: 38.5%;
+    top: 39.5%;
+}
+
+button#emergency-poster {
+    height: 100px;
+    width: 10%;
+    left: 17.4%;
+    top: 33%;
+}
+
+.vlab button img,
+ul.office-folder li img {
+    animation: pulse 3s infinite;
+    -webkit-animation: pulse 3s infinite;
+    -moz-animation: pulse 3s infinite;
+    -o-animation: pulse 3s infinite;
+}
+
+/*pulse animation of icons*/
+
+/*pulse animation of icons*/
+@keyframes pulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0px 0px 0px none);
+    }
+
+    50% {
+        filter: drop-shadow(1px 3px 7px #000054);
+    }
+}
+
+@-webkit-keyframes pulse {
+
+    0%,
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px none);
+    }
+
+    50% {
+        -webkit-filter: drop-shadow(1px 3px 7px #000054);
+    }
+}
+
+/*more vendor prefixes for compatibility*/
+@-moz-keyframes pulse {
+
+    0%,
+    100% {
+        -moz-filter: drop-shadow(0px 0px 0px none);
+    }
+
+    50% {
+        -moz-filter: drop-shadow(1px 3px 7px #000054);
+    }
+}
+
+@-o-keyframes pulse {
+
+    0%,
+    100% {
+        -o-filter: drop-shadow(0px 0px 0px none);
+    }
+
+    50% {
+        -o-filter: drop-shadow(1px 3px 7px #000054);
+    }
+}
+
+.face:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+
+.face:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+
+/*Overides BS4 modal values*/
+
+.modal-content {
+    background-color: transparent !important;
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+
+.modal-header {
+    border-bottom: 0px solid transparent !important;
+}
+
+/*Computer scree modal*/
+
+.computer-screen {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/Screen%401000x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.computer-bg-top {
+    border-top: 1.2rem solid #2C2D2D;
+    border-right: 1.2rem solid #2C2D2D;
+    border-left: 1.2rem solid #2C2D2D;
+}
+
+.computer-bg-bottom {
+    border-right: 1.2rem solid #2C2D2D;
+    border-left: 1.2rem solid #2C2D2D;
+    border-bottom: 1.2rem solid #2C2D2D;
+    max-height: 25rem;
+}
+
+.computer-bottom-frame {
+    background-color: #DDDDDC;
+    border-radius: 0 0 3rem 3rem;
+    height: 4rem;
+}
+
+ul.folder {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+    /* width: 300px;
+    margin-left: 15%; */
+}
+
+ul.folder li {
+    margin: 1rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.folder li a {
+    color: #fff;
+}
+
+.folder li a img {
+    height: 60px;
+    width: auto;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 0.3rem;
+}
+
+
+/*Office-modal*/
+
+.office-container {
+    max-width: 50rem;
+    width: 80%;
+}
+
+.office-modal {
+    height: 400px;
+}
+
+.office {
+    background-image: url("https://emedia.rmit.edu.au/EEET7019C/wp-content/uploads/2018/10/office-copy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*floor plan*/
+
+.floorplan-container {
+    max-width: 50rem;
+    width: 670px;
+}
+
+.floorplan-modal {
+    height: 460px;
+}
+
+.floorplan-container {
+    background-image: url("/img/slide_6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*modification to theme.css*/
+.btn,
+.btn-default {
+    background-color: transparent !important;
+}
+
+
+/*popup*/
+.popup {
+    visibility: hidden;
+    top: 0;
+    right: 5rem;
+    z-index: 9;
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 12px;
+    position: absolute;
+    line-height: 1.2;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+}
+
+
+.office-folder:hover .popup {
+    visibility: visible;
+}
+
+.modal-title {
+    background-color: white;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    border-radius: 20px;
+}
+
+h5 {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.35);
+}
+
+h4{
+    color: #000054;
+    border-width: 2px;
+    cursor: pointer;
+}

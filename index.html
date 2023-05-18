@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IIITV-ICD | Virtual Workplace</title>
+    <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/css/theme.min.css'>
+    <link rel='stylesheet'
+        href='https://emedia.rmit.edu.au/C3319/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css'>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="wrapper">
+        <div id="scroller" class="vlab">
+
+            <body onload="loaded()">
+
+                <ul>
+                    <li><button id="office" type="button" class="btn" title="Administrative Office" data-toggle="modal"
+                            data-target="#Office"><img alt="managers office"
+                                src="https://emedia.rmit.edu.au/EEET7019C/wp-content/uploads/2018/10/door.png"></button>
+                    </li>
+
+                    <li><button id="safety" type="button" class="btn" title="explore OH&S"><img alt="OH&S poster"
+                                src="https://emedia.rmit.edu.au/BUSM8779C/wp-content/uploads/2018/09/Health-safety@1000x.png"></button>
+                    </li>
+
+                    <li><button id="computer" type="button" title="Explore Virtual Labs" data-toggle="modal"
+                            data-target="#Computerdocuments"><img alt="Computer"
+                                src="https://emedia.rmit.edu.au/EEET7019C/wp-content/uploads/2018/10/computer.png"></button>
+                    </li>
+
+                    <li><button id="emergency-poster" type="button" title="Instructions" data-toggle="modal"
+                            data-target="#map"><img alt="Instructions"
+                            
+                                src="img/slide_6.jpg"></button>
+                    </li>
+                    <li>
+                        <button id="institute-logo" type="button" title="IIITV-ICD"
+                            data-toggle="modal" data-target="#logo" onclick="sitedirect()"><img alt="institute-logo"
+                                src="img/diu_logo-removebg-preview.png"></button>
+                    </li>
+                    <li>
+                        <button id="grp-logo" type="button" title="Fysics Phive"
+                            data-toggle="modal" data-target="#grplogo"><img alt="grp-logo"
+                                src="img/logo.jpg"></button>
+                    </li>
+                    <li>
+                        <button id="name-lab" type="button" title="Virtual Lab"
+                            data-toggle="modal" data-target="#namelab"><img alt="name-lab"
+                                src="img/text-form-lab.png"></button>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="modal fade" id="map" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog floorplan-container" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Instructions</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="floorplan-modal"></div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Office" tabindex="-1" role="dialog" aria-labelledby="OfficeLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog office-container" role="document">
+                <div class="modal-content ">
+                    <div class="office">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Manager's office</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body office-modal">
+                            <ul class="office-folder">
+                                <li><a id="office-folder" href="#"><img
+                                            src="https://emedia.rmit.edu.au/EEET7019C/wp-content/uploads/2018/10/tray.png"
+                                            alt="assessments info"></a><span class="popup">To find out more about the
+                                        assessments, navigate through the assessment link in your Canvas menu on the
+                                        left.<h1 class="arrow">↩︎<br></h1><h4>Submit Assignment</h4></span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="assessment">
+
+            <div class="modal fade" id="Computerdocuments" tabindex="-1" role="dialog"
+                aria-labelledby="ComputerdocumentsLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog " role="document">
+                    <div class="modal-content">
+                        <div class="computer-screen">
+                            <div class="modal-header computer-bg-top">
+                                <h5 class="modal-title" id="exampleModalLabel">Virtual Labs</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body computer-bg-bottom">
+                                <ul class="folder">
+                                    <li><a href="coordinate-convertor.html">
+                                            <img src="img/coordinates.gif"
+                                                alt="">
+                                            Coordinate<br>Convertor
+                                        </a>
+                                    </li>
+                                    <li><a href="number-convertor.html">
+                                            <img src="img/number-system.gif"
+                                                alt="">
+                                            Number<br>Convertor
+                                        </a>
+                                    </li>
+                                    <li><a href="ac.html">
+                                            <img src="img/man-factory-worker.png"
+                                                alt="">
+                                            Air-Conditioning<br>Mate
+                                        </a>
+                                    </li>
+                                    <!-- ref link of php file -->
+                                    <li><a href="http://localhost:3000/counter.php">
+                                            <img src="img/gray-code-gray-counter.gif"
+                                                alt="">
+                                            Gray Modulo-10<br>Convertor
+                                        </a>
+                                    </li>
+                                    <li><a href="Help-Book.pdf" download>
+                                            <img src="https://emedia.rmit.edu.au/BUSM8779C/wp-content/uploads/2018/09/icon@1000x.png"
+                                                alt="HelpBook">
+                                            Help-Book<br>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer computer-bottom-frame">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- partial -->
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.glossarize.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.min.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/popper.min.js?ver=1'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/theme.min.js?ver=1.1.9a'></script>
+<script>
+    function sitedirect(){
+        window.location.href = "http://diu.iiitvadodara.ac.in/";
+    }
+</script>
+</body>
+
+</html>
